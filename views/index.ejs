@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+       
+
+       
+
+        .short-content {
+            overflow: hidden;
+            line-height: 1.5em;
+            max-height: 7.5em;
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+  display: flex;
+  justify-content: center; 
+}
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/verification.html">Add Articles</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
+        </nav>
+        
+    </header>
+    <hr>
+    <main>
+        <section id="home" class="main">
+            <h1>Hi, I'm Tamrat Demse <span class="wave">👋</span></h1>
+            <p>Welcome to my blog where I share my thoughts and ideas. Here you will find posts on various topics
+                including sports, natural features, and technology. Enjoy your stay!</p>
+        </section>
+
+        <section id="sports">
+            <h2>Sports</h2>
+            <div class="post-container">
+                <% sportsArticles.forEach(function(article) { %>
+                <article class="post">
+                    <h3><%= article.article %></h3>
+                    <p class="short-content">
+                        <%= article.content.split('\n').slice(0, 5).join('<br>') %>...
+                    </p>
+                    <a href="/article/<%= article._id %>" class="read-more">Read more</a>
+                </article>
+                <% }) %>
+            </div>
+        </section>
+
+        <section id="natural-features">
+            <h2>Natural Features</h2>
+            <div class="post-container">
+                <% naturalFeaturesArticles.forEach(function(article) { %>
+                <article class="post">
+                    <h3><%= article.article %></h3>
+                    <p class="short-content">
+                        <%= article.content %>...
+                    </p>
+                    <a href="/article/<%= article._id %>" class="read-more">Read more</a>
+                </article>
+                <% }) %>
+            </div>
+        </section>
+
+        <section id="technology">
+            <h2>Technology</h2>
+            <div class="post-container">
+                <% technologyArticles.forEach(function(article) { %>
+                <article class="post">
+                    <h3><%= article.article %></h3>
+                    <p class="short-content">
+                        <%= article.content.split('\n').slice(0, 5).join('<br>') %>...
+                    </p>
+                    <a href="/article/<%= article._id %>" class="read-more">Read more</a>
+                </article>
+                <% }) %>
+            </div>
+        </section>
+
+          <h2>Contact Me</h2>
+           <section id="contact" class="contactt">
+           <div class="social-media">
+                <div class="social-icons">
+                    <a href="https://t.me/Tamratdemse"><i class="fab fa-telegram"></i></a>
+                    <a href="mailto:demsetamrat@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/tamrat-demse-265bb42b7"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Tamratdemse"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <p>&copy; 2024 My Personal Blog. All rights reserved.</p>
+    </footer>
+    
+   
+    <script src="/scripts.js"></script>
+</body>
+
+</html>

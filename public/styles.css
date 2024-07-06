@@ -1,0 +1,320 @@
+
+.form2{
+    box-shadow: 0 2px 8px white;
+    padding: 20px;
+    max-width: 1024px;
+   
+}
+
+.btn{
+    margin-left: 500px;
+}
+
+#content{
+    padding: 5px;
+    margin-left: 50px;
+}
+#article{
+margin-left: 55px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #121212;
+    color: #eee;
+    line-height: 1.6;
+}
+
+header {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 10px ;
+
+  margin: 0;
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #1e90ff;
+
+}
+
+main {
+    padding: 20px;
+    margin-left: 215px;
+    max-width: 2000px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2, h3 {
+    color: #eee;
+}
+
+.wave {
+    animation: wave-animation 2s infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+footer {
+    background: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px ;
+   
+  
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+
+
+.contact-me,
+.social-media {
+    flex: 0 1 45%; /* Adjust the width as needed */
+}
+
+hr {
+    height: 0.1px;
+    border: none; 
+    background-color: #999;
+    margin-top: 0; 
+
+ }
+.contact-me form {
+    margin-top: 10px;
+}
+
+.contact-me input,
+.contact-me textarea {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#searchInput{
+    border-radius: 15px;
+    height: 20px;
+}
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+    /* Hide the nav ul by default */
+    nav ul {
+        display: none;
+        flex-direction: column; /* Stack the links vertically */
+        position: absolute;
+        top: 60px; /* Adjust according to your header height */
+        left: 0;
+        background: #1e1e1e; /* Set background color */
+        width: 25%; /* Full width */
+        padding: 10px 20px; /* Add padding */
+        border: 1px solid #1e90ff;
+        border-radius: 20px;
+        margin-left: 20px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5);
+    }
+    header{
+      box-shadow: none;
+    }
+    /* Show the nav ul when class 'show' is added */
+    nav ul.show {
+        display: flex;
+    }
+    main {
+        padding: 20px;
+        margin-left: 80px;
+        max-width: 100%;
+    }
+
+    /* Style the links */
+    nav ul li {
+        margin: 10px 0; /* Add some vertical spacing */
+    }
+
+    /* Hide the toggleNav button on larger screens */
+    .nav-toggle {
+        display: block;
+        
+    }
+
+    /* Adjust header padding to accommodate toggleNav button */
+    header {
+        padding: 10px 0;
+     
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-toggle {
+        display: none;
+    }
+}
+
+
+
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.post {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(40% - 20px);
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Added transition for smooth animation */
+}
+
+.post:hover {
+    transform: scale(1.05);
+    border: 1px solid #1e90ff;
+}
+
+.post h3 {
+    color: #1e90ff;
+}
+
+.post a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.main {
+ 
+   
+    max-width: 700px;
+}
+.yegna {
+    border: 2px solid #000; /* Default border color */
+    background-color: #fff; /* Default background color */
+    color: #000; /* Default text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: border-color 0.2s ease; /* Smooth transition for border color */
+    border-radius: 10px;
+}
+
+.yegna:hover {
+    border-color: #1e90ff;
+    color: white; 
+    background-color: #000;/* Change border color to blue on hover */
+}
+
+
+
+.dis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adds space between the different sections */
+}
+
+
+#searchInput {
+    border: 2px solid #ccc; /* Default border color */
+    padding: 5px;
+    font-size: 16px;
+}
+
+#searchInput:focus,
+#searchInput:hover {
+    border-color: blue; /* Border color when the input is focused or hovered */
+    outline: none; /* Remove default outline */
+}
+
+.btn{
+    border-radius: 5px;
+    background-color: #322d2d;
+    color: white;
+}
+.btn:hover{
+   
+    border-color: #1e90ff;
+}
+
+.btn1{
+    margin-left: 10px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+

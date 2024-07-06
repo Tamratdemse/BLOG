@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Content</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+       body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+      
+       
+      
+    </style>
+</head>
+<body>
+    <div class="form2">
+        <h2 class="delete">enter the info to delete</h2>
+        <form action="/remove" method="post">
+            <label for="category">Choose a category:</label>
+            <select id="category" name="category" required>
+                <option value="Sport">Sport</option>
+                <option value="NaturalFeature">Natural Features</option>
+                <option value="Technology">Technology</option>
+            </select>
+            <br><br>
+            
+            <label for="article">Article Name:</label>
+            <input id="article" name="article" required></input>
+            <br><br>
+
+            
+            
+            <input class="btn" type="submit" value="Submit">
+        </form>
+     
+        
+    </div>
+
+    
+</body>
+</html>
